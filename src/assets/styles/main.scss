@@ -1,20 +1,34 @@
-/**
- * Use this file to import partials.
- * Do not include SCSS code in this file.
- */
+// CASCADE LAYERS
+@layer reset, base, layout, components, utilities;
 
- /**
- * Import dependencies
- */
-@use "dependencies";
 
-/**
- * Import layouts
- * It's a best practice to use a different partial for each page
- */
+/* Import SETTINGS */
+@use "./1-settings/variables";
 
- @use "layouts/home";
 
-/**
- * Do NOT include anything else in this file!
- */
+/* Import TOOLS */
+@use "./2-tools/functions";
+@use "./2-tools/mixins";
+@use "./2-tools/_bootstrap-custom";
+
+
+/* Import GENERIC and ELEMENTS*/
+@layer reset {
+  @use "./3-generic/reset";
+}
+
+@layer base {
+  @use "./3-generic/dependencies";
+  @use "./4-elements/base";
+}
+
+/* Import OBJECTS */
+@layer layout {
+  @use "./5-objects/container";
+  @use "./5-objects/titles";
+}
+
+/* Import COMPONENTS */
+@layer components {
+  @use "./6-components/button";
+}
