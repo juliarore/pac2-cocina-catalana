@@ -1,0 +1,17 @@
+@use "sass:color";
+@use "sass:math";
+
+// Function to get opacity color
+@function opacity($color, $alpha) {
+    @return color.change($color, $alpha: $alpha);
+}
+
+// Function to convert px to rem (default base = 16px)
+@function rem($px, $base: 16) {
+  @return math.div($px, $base) * 1rem;
+}
+
+// Function to darken color
+@function darken-color($color, $amount: 10%) {
+    @return color.adjust($color, $lightness: -$amount);
+}
