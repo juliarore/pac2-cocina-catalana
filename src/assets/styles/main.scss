@@ -1,7 +1,3 @@
-// CASCADE LAYERS
-@layer reset, base, layout, components, utilities;
-
-
 /* Import SETTINGS */
 @use "./1-settings/variables";
 
@@ -12,23 +8,26 @@
 @use "./2-tools/_bootstrap-custom";
 
 
-/* Import GENERIC and ELEMENTS*/
-@layer reset {
-  @use "./3-generic/reset";
-}
+/* Import GENERIC */
+@use "./3-generic/reset";
+@use "./3-generic/dependencies";
 
-@layer base {
-  @use "./3-generic/dependencies";
-  @use "./4-elements/base";
-}
+
+/* Import ELEMENTS*/
+@use "./4-elements/base";
+
 
 /* Import OBJECTS */
-@layer layout {
-  @use "./5-objects/container";
-  @use "./5-objects/titles";
-}
+@use "./5-objects/container";
+@use "./5-objects/titles";
+
 
 /* Import COMPONENTS */
-@layer components {
-  @use "./6-components/button";
-}
+@use "./6-components/button";
+
+
+/* Import UTILITIES */
+
+
+// CASCADE LAYERS
+@layer reset, base, layout, components, utilities;
