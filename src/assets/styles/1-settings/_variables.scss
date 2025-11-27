@@ -6,9 +6,14 @@ $font-family-sans: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
 $font-family-serif: "EB Garamond", Georgia, "Times New Roman", serif;
 
 // Colors
-$color-primary: #3F81DE;
+$color-primary: #1C69A8;
 $color-primary-hover: f.darken-color($color-primary);
-$color-secondary: #DE9C3F;
+$color-secondary: #E1712B;
 $color-opacity: f.opacity(#fff, 0.8);
-$color-primary-hover: #DE9C3F;
 $color-background: #f9f9f9;
+
+// Font weights
+$fw-regular: 400;
+$fw-semi-bold: 600;
+$fw-bold: 700;
+$fw-extra-bold: 800;
