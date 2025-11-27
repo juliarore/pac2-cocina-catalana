@@ -1,5 +1,21 @@
+@use "../1-settings/variables" as v;
+
 // Sobreescritura de variables
 
+// Colores
+$theme-colors: (
+  "primary": v.$color-primary,
+  "secondary":  v.$color-secondary,
+  "primary-hover": v.$color-primary-hover,
+  "background": v.$color-background
+);
+
+// Tipografía
+$font-family-sans-serif: v.$font-family-sans;
+$font-family-serif: v.$font-family-serif;
+
+// Disable deprecation warnings
+$enable-deprecation-messages: false;
 
 // Importación de Bootstrap
 @import "bootstrap/scss/bootstrap";
