@@ -7,17 +7,30 @@
 
   &__grid {
     position: relative;
-    display: grid;
     min-height: 80vh;
-    padding: 8rem 8rem 0 8rem;
-    grid-template-columns: 1.5fr 2fr;
-    grid-template-rows: 4rem 4rem 4rem 4rem;
-    gap: 6rem;
-    grid-template-areas:
-      "title ."
-      ". cta "
-      "availability ."
-      "info subtitle";
+
+    // Fallback
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    padding: 7rem 2rem;
+    text-align: center;
+
+    // Grid
+    @supports (display: grid) {
+      display: grid;
+      padding: 7rem 8rem 0 8rem;
+      text-align: left;
+      grid-template-columns: 1.5fr 2fr;
+      grid-template-rows: 4rem 4rem 4rem 4rem;
+      gap: 6rem;
+      grid-template-areas:
+        "title ."
+        ". cta "
+        "availability ."
+        "info subtitle";
+    }
 
     &::before {
       content: "";
@@ -40,46 +53,66 @@
   }
 
   &__title {
-    grid-area: title;
-    display: flex;
-    align-items: center;
     text-shadow: 2px 2px 6px f.opacity(v.$color-black, 0.3);
+
+    @supports (display: grid) {
+      grid-area: title;
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__info {
-    grid-area: info;
-    display: flex;
-    align-items: center;
+    @supports (display: grid) {
+      grid-area: info;
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__availability {
-    grid-area: availability;
     display: flex;
     align-items: center;
     justify-content: center;
-    justify-self: start;
     width: f.rem(350);
+    height: 4rem;
     background-color: v.$color-secondary;
     border-radius: 5px;
     font-weight: bold;
+
+    @supports (display: grid) {
+      grid-area: availability;
+      justify-self: start;
+      height: 100%;
+    }
   }
 
   &__subtitle {
-    grid-area: subtitle;
-    align-self: end;
-    justify-self: end;
-    padding: 2rem 3rem;
-    margin-right: -8rem;
+    padding: 2rem 7rem 2rem 2rem;
     background-color: v.$color-background;
     color: v.$color-primary;
-    border-radius: 10px 0 0 10px;
+    border-radius: 10px;
+    margin: 0 auto;
+
+    @supports (display: grid) {
+      grid-area: subtitle;
+      align-self: end;
+      justify-self: end;
+      margin-right: -8rem;
+      border-radius: 10px 0 0 10px;
+    }
   }
 
   &__cta {
-    grid-area: cta;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
+
+    @supports (display: grid) {
+      grid-area: cta;
+      justify-content: flex-end;
+      height: 100%;
+    }
   }
 
   &__button {
@@ -87,9 +120,12 @@
     align-items: center;
     justify-content: center;
     width: f.rem(350);
-    height: 100%;
     font-weight: v.$fw-bold;
     text-transform: uppercase;
+
+    @supports (display: grid) {
+      height: 100%;
+    }
   }
 
   &__text {
