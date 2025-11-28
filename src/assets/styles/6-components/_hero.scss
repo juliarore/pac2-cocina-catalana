@@ -1,0 +1,98 @@
+@use "../1-settings/variables" as v;
+@use "../2-tools/functions" as f;
+
+.hero {
+  position: relative;
+  color: v.$color-white;
+
+  &__grid {
+    position: relative;
+    display: grid;
+    min-height: 80vh;
+    padding: 8rem 8rem 0 8rem;
+    grid-template-columns: 1.5fr 2fr;
+    grid-template-rows: 4rem 4rem 4rem 4rem;
+    gap: 6rem;
+    grid-template-areas:
+      "title ."
+      ". cta "
+      "availability ."
+      "info subtitle";
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("../images/hero.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: f.opacity(v.$color-black, 0.2);
+      z-index: -1;
+    }
+  }
+
+  &__title {
+    grid-area: title;
+    display: flex;
+    align-items: center;
+    text-shadow: 2px 2px 6px f.opacity(v.$color-black, 0.3);
+  }
+
+  &__info {
+    grid-area: info;
+    display: flex;
+    align-items: center;
+  }
+
+  &__availability {
+    grid-area: availability;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: start;
+    width: f.rem(350);
+    background-color: v.$color-secondary;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+
+  &__subtitle {
+    grid-area: subtitle;
+    align-self: end;
+    justify-self: end;
+    padding: 2rem 3rem;
+    margin-right: -8rem;
+    background-color: v.$color-background;
+    color: v.$color-primary;
+    border-radius: 10px 0 0 10px;
+  }
+
+  &__cta {
+    grid-area: cta;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: f.rem(350);
+    height: 100%;
+    font-weight: v.$fw-bold;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin: 0;
+  }
+}
