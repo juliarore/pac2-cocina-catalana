@@ -1,0 +1,62 @@
+@use "../1-settings/variables" as v;
+@use "../2-tools/functions" as f;
+
+.footer {
+  padding: 0 8rem;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    border-top: 1px solid v.$color-primary;
+    padding: 3rem 0;
+  }
+
+  &__logo {
+    justify-self: start;
+  }
+
+  &__img {
+    width: f.rem(225);
+    height: auto;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__text {
+      margin-bottom: .5rem;
+      font-size: f.rem(16);
+      color: v.$color-primary;
+  }
+
+  &__copyright {
+    text-align: center;
+
+    &__text {
+      font-size: f.rem(14);
+      color: v.$color-primary;
+      margin: 0;
+    }
+  }
+
+  &__social-media {
+    display: flex;
+    gap: 2rem;
+    justify-content: end;
+  }
+
+  &__icon {
+    font-size: f.rem(20);
+  }
+}

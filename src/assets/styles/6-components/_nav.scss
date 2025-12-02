@@ -2,32 +2,32 @@
 @use "../2-tools/functions" as f;
 
 .header {
-    position: sticky;
-    z-index: 10;
-    width: 100%;
-    background-color: v.$color-white;
+  position: sticky;
+  z-index: 10;
+  width: 100%;
+  background-color: v.$color-white;
 
-    &__nav {
-        padding: 1rem 8rem;
+  &__nav {
+    padding: 1rem 8rem;
+  }
+
+  &__logo {
+    width: f.rem(200);
+    height: auto;
+  }
+
+  &__list {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+  }
+
+  &__link {
+    color: v.$color-primary;
+
+    &:hover {
+        color: v.$color-primary-hover;
     }
-
-    &__logo {
-        width: f.rem(200);
-        height: auto;
-    }
-
-    &__list {
-        display: flex;
-        gap: 3rem;
-        list-style: none;
-    }
-
-    &__link {
-        color: v.$color-primary;
-
-        &:hover {
-            color: v.$color-primary-hover;
-        }
-    }
+  }
 }
 
