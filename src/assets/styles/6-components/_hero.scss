@@ -54,6 +54,9 @@
 
   &__title {
     text-shadow: 2px 2px 6px f.opacity(v.$color-black, 0.3);
+    font-family: v.$font-family-serif;
+    font-size: f.rem(48);
+    font-weight: v.$fw-bold;
 
     @supports (display: grid) {
       grid-area: title;
@@ -89,7 +92,7 @@
 
   &__subtitle {
     padding: 2rem 2rem 2rem 2rem;
-    background-color: v.$color-background;
+    background-color: v.$color-white;
     color: v.$color-primary;
     border-radius: 10px;
     margin: 0 auto;
