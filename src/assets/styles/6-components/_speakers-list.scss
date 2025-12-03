@@ -5,11 +5,11 @@
   text-align: center;
 
   &__list {
-      padding-block: 2rem;
       display: flex;
       flex-wrap: wrap;
       gap: 3rem;
       justify-content: center;
+      padding-block: 2rem;
       margin-top: 2rem;
     }
 
@@ -22,10 +22,10 @@
   &__img {
     width: 100%;
     height: f.rem(500);
+    margin-bottom: 1rem;
     object-fit: cover;
     object-position: top;
     border-radius: 8px;
-    margin-bottom: 1rem;
     transition: opacity 0.3s ease;
 
     &:hover {

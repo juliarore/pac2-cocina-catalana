@@ -10,8 +10,8 @@ body {
 
 a,
 a.link {
-    text-decoration: none;
     color: v.$color-primary;
+    text-decoration: none;
     transition: color 0.2s ease;
 
     &:hover {
