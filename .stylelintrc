@@ -1,0 +1,45 @@
+{
+  "extends": [
+    "stylelint-config-recommended-scss",
+    "stylelint-config-recess-order"
+  ],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "selector-class-pattern": [
+      "^[a-z]([a-z0-9-]+)?(__[a-z0-9-]+)?(--[a-z0-9-]+)?$",
+      {
+        "resolveNestedSelectors": true,
+        "message": "Els selectors de classe han de seguir la convenció BEM (block__element--modifier)."
+      }
+    ],
+    "selector-max-id": [
+      0,
+      { "message": "Evita utilitzar IDs." }
+    ],
+    "declaration-no-important": [
+      true,
+      { "message": "Evita l’ús de !important excepte casos molt concrets." }
+    ],
+    "selector-max-compound-selectors": [
+      3,
+      { "message": "Evita selectors massa llargs o imbricats (màxim tres nivells)." }
+    ],
+    "max-nesting-depth": [
+      3,
+      { "message": "Limita el nesting a un màxim de tres nivells." }
+    ],
+    "color-named": [
+      "never",
+      { "message": "Els colors han de definir-se amb valors hexadecimals o variables Sass." }
+    ],
+    "no-irregular-whitespace": [
+      true,
+      { "message": "Assegura que no hi hagi espais invisibles o innecessaris al codi." }
+    ],
+
+    "selector-type-case": [
+      "lower",
+      { "message": "Els selectors i etiquetes han d’estar sempre en minúscules." }
+    ]
+  }
+}
