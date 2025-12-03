@@ -31,3 +31,9 @@
   }
 }
 
+
+/* Active link style */
+.page-home .nav-link[href="index.html"],
+.page-speakers .nav-link[href="speakers.html"]  {
+  font-weight: v.$fw-bold;
+}
