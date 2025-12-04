@@ -34,6 +34,7 @@
 
 /* Active link style */
 .page-home .nav-link[href="index.html"],
-.page-speakers .nav-link[href="speakers.html"]  {
+.page-speakers .nav-link[href="speakers.html"],
+.page-article .nav-link[href="article.html"] {
   font-weight: v.$fw-bold;
 }
