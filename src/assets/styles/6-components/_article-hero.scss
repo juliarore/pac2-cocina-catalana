@@ -1,0 +1,35 @@
+@use "../1-settings/variables" as v;
+@use "../2-tools/functions" as f;
+
+.article-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 80vh;
+    padding-inline: 1.5rem;
+    margin-inline: auto;
+    text-align: center;
+    background-image: url('../images/article-hero-img.jpg');
+    background-position: center;
+    background-size: cover;
+
+    &::after {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        content: "";
+        background: f.opacity(v.$color-black, 0.3);
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__title,
+    &__subtitle {
+        color: v.$color-white;
+    }
+}

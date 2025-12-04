@@ -1,5 +1,13 @@
+@use "../2-tools/functions" as f;
+
 .main-container {
   padding-block: 3rem;
   padding-inline: 8rem;
+  margin-inline: auto;
+}
+
+.small-container {
+  max-width: f.rem(900);
+  padding-block: 4rem;
   margin-inline: auto;
 }

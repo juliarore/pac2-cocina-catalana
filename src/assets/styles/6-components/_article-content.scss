@@ -1,0 +1,61 @@
+@use "../2-tools/functions" as f;
+@use "../1-settings/variables" as v;
+
+
+.article-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+
+  &__intro {
+    align-content: center;
+
+    :is(.article-content__text) {
+      font-family: v.$font-family-serif;
+      font-size: f.rem(28);
+      font-style: italic;
+      color: v.$color-primary;
+    }
+  }
+}
+
+.article-list {
+  border-block: 1px solid v.$color-primary;
+
+  &__list {
+    counter-reset: item;
+
+    :is(li) {
+      position: relative;
+      padding-left: 1rem;
+      margin-bottom: 2.25rem;
+      list-style: none;
+      counter-increment: item;
+    }
+
+    :is(li)::before {
+      position: absolute;
+      top: -0.1rem;
+      left: -2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      font-size: f.rem(20);
+      font-weight: v.$fw-semi-bold;
+      color: v.$color-secondary;
+      content: counter(item);
+      border: 1px solid v.$color-secondary;
+      border-radius: 50%;
+    }
+
+    :is(p) {
+      text-align: justify;
+    }
+
+    :is(h3) {
+      margin-bottom: .75rem;
+    }
+  }
+}
