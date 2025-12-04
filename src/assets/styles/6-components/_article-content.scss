@@ -3,9 +3,12 @@
 
 
 .article-content {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 3rem;
+
+  &:has(.article-content__intro):has(.article-content__body) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+  }
 
   &__intro {
     align-content: center;
@@ -16,6 +19,10 @@
       font-style: italic;
       color: v.$color-primary;
     }
+  }
+
+  &__text {
+    text-align: justify;
   }
 }
 
@@ -51,6 +58,7 @@
     }
 
     :is(p) {
+      margin-bottom: 0;
       text-align: justify;
     }
 
@@ -58,4 +66,51 @@
       margin-bottom: .75rem;
     }
   }
+}
+
+.article-quote {
+
+  &__block {
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+    border-left: 3px solid v.$color-secondary;
+  }
+
+  &__text {
+    margin-bottom: 1rem;
+    font-family: v.$font-family-serif;
+    font-size: f.rem(28);
+    font-style: italic;
+  }
+
+  &__author {
+    font-size: f.rem(18);
+    color: v.$color-primary;
+  }
+}
+
+.article-figure {
+  padding-block: 0;
+
+  :where(&__image) {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+  }
+
+  :is(&__caption) {
+    margin-top: 0.5rem;
+    font-size: f.rem(14);
+    text-align: center;
+  }
+
+  :has(a:hover) &__image {
+    opacity: 0.8;
+  }
+}
+
+.article-cta {
+  text-align: center;
+  border-top: 1px solid v.$color-primary;
 }
