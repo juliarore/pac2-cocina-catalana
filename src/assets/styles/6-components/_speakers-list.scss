@@ -41,3 +41,12 @@
     color: v.$color-secondary;
   }
 }
+
+.speakers-intro {
+  padding-block: 4rem;
+
+  :is(.speakers__list) {
+    padding-block: 0;
+  }
+}
+
