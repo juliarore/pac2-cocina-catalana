@@ -2,56 +2,56 @@
 @use "../2-tools/functions" as f;
 
 .contact{
-    padding-block: 2rem;
+  padding-block: 3rem;
+  max-width: f.rem(600);
+  border-top: 1px solid v.$color-primary;
+  margin-inline: auto;
 
-    &__text {
-        margin-bottom: 2rem;
-        text-align: justify;
+  &__text,
+  &__title {
+    text-align: center;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-block: 3rem;
+  }
+
+  &__itemform {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  &__label {
+    font-weight: v.$fw-semi-bold;
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: .6rem .9rem;
+    font-family: v.$font-family-sans;
+    font-size: f.rem(16);
+    border: 1px solid v.$color-border-light;
+    border-radius: .5rem;
+    transition: border-color .2s ease;
+
+    &:focus {
+    outline: none;
+    border-color: v.$color-primary;
     }
+  }
 
-    &__form {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        max-width: f.rem(600);
-        margin-block: 2rem;
+  &__checkbox {
+    display: flex;
+    gap: 0.5rem;
+
+    .contact__input {
+    width: auto;
+    margin: 0;
     }
-
-    &__itemform {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        margin-bottom: 1rem;
-    }
-
-    &__label {
-        margin-bottom: .25rem;
-        font-weight: v.$fw-semi-bold;
-    }
-
-    &__input,
-    &__textarea {
-        width: 100%;
-        padding: .6rem .9rem;
-        font-family: v.$font-family-sans;
-        font-size: f.rem(16);
-        border: 1px solid v.$color-border-light;
-        border-radius: .5rem;
-        transition: border-color .2s ease;
-
-        &:focus {
-        outline: none;
-        border-color: v.$color-primary;
-        }
-    }
-
-    &__checkbox {
-        display: flex;
-        gap: 0.5rem;
-
-        .contact__input {
-        width: auto;
-        margin: 0;
-        }
-    }
+  }
 }
