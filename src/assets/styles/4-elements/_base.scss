@@ -1,24 +1,41 @@
 @use "../1-settings/variables" as v;
 @use "../2-tools/functions" as f;
+@use "../2-tools/mixins" as m;
 
 body {
-    display: flex;
-    flex-direction: column;
-    font-family: v.$font-family-sans;
-    background-color: v.$color-white;
-    }
+  display: flex;
+  flex-direction: column;
+  font-family: v.$font-family-sans;
+  background-color: v.$color-white;
+  }
 
 a,
 a.link {
-    color: v.$color-primary;
-    text-decoration: none;
-    transition: color 0.2s ease;
+  color: v.$color-primary;
+  text-decoration: none;
+  transition: color 0.2s ease;
 
-    &:hover {
-        color: v.$color-primary-hover;
-    }
+  &:hover {
+      color: v.$color-primary-hover;
+  }
 }
 
 p {
   font-size: f.rem(18);
+
+  @include m.respond(tablet) {
+    font-size: f.rem(17);
+  }
+
+  @include m.respond(mobile) {
+    font-size: f.rem(16);
+  }
+}
+
+small {
+  font-size: f.rem(14);
+
+  @include m.respond(mobile) {
+    font-size: f.rem(13);
+  }
 }
