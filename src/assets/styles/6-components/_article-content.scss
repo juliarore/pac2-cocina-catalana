@@ -1,5 +1,6 @@
 @use "../2-tools/functions" as f;
 @use "../1-settings/variables" as v;
+@use "../2-tools/mixins" as m;
 
 
 .article-content {
@@ -8,6 +9,11 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 3rem;
+
+    @include m.respond(mobile) {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
   }
 
   &__intro {
@@ -18,6 +24,15 @@
       font-size: f.rem(28);
       font-style: italic;
       color: v.$color-primary;
+
+      @include m.respond(tablet) {
+        font-size: f.rem(26);
+      }
+
+      @include m.respond(mobile) {
+        font-size: f.rem(24);
+        text-align: center;
+      }
     }
   }
 
@@ -28,6 +43,12 @@
 
 .article-list {
   border-block: 1px solid v.$color-primary;
+
+  &__title {
+    @include m.respond(mobile) {
+      text-align: center;
+    }
+  }
 
   &__list {
     counter-reset: item;
@@ -81,6 +102,14 @@
     font-family: v.$font-family-serif;
     font-size: f.rem(28);
     font-style: italic;
+
+    @include m.respond(tablet) {
+      font-size: f.rem(26);
+    }
+
+    @include m.respond(mobile) {
+      font-size: f.rem(24);
+    }
   }
 
   &__author {
