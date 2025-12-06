@@ -1,14 +1,29 @@
 @use "../1-settings/variables" as v;
 @use "../2-tools/functions" as f;
+@use "../2-tools/mixins" as m;
 
 .highlights {
   padding: 6rem 0 2rem 0;
+
+  @include m.respond(tablet) {
+    padding: 4rem 0 2rem 0;
+  }
 
   &__container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 3rem;
     text-align: center;
+
+    @include m.respond(tablet) {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    @include m.respond(mobile) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
   }
 
   &__icon {
