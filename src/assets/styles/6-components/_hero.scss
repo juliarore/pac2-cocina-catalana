@@ -31,6 +31,30 @@
       gap: 6rem;
       padding: 7rem 8rem 0 8rem;
       text-align: left;
+
+      @include m.respond(tablet) {
+        grid-template-areas:
+          "title title"
+          "info info"
+          "availability cta"
+          "subtitle subtitle";
+        grid-template-rows: auto auto f.rem(70) auto;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding: 4rem;
+        text-align: center;
+      }
+
+      @include m.respond(mobile) {
+        grid-template-areas:
+          "title"
+          "info"
+          "availability"
+          "cta"
+          "subtitle";
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-columns: 1fr;
+      }
     }
 
     &::before {
@@ -59,10 +83,22 @@
     font-weight: v.$fw-bold;
     text-shadow: 2px 2px 6px f.opacity(v.$color-black, 0.3);
 
+    @include m.respond(mobile) {
+      font-size: f.rem(32);
+    }
+
+    @include m.respond(tablet) {
+      font-size: f.rem(40);
+    }
+
     @supports (display: grid) {
       display: flex;
       grid-area: title;
       align-items: center;
+
+      @include m.respond(tablet) {
+        justify-content: center;
+      }
     }
   }
 
@@ -71,6 +107,10 @@
       display: flex;
       grid-area: info;
       align-items: center;
+
+      @include m.respond(tablet) {
+        justify-content: center;
+      }
     }
   }
 
@@ -88,6 +128,17 @@
       grid-area: availability;
       justify-self: start;
       height: 100%;
+
+      @include m.respond(tablet) {
+        justify-self: start;
+        width: 100%;
+        max-width: f.rem(350);
+        padding: .5rem 0;
+      }
+
+      @include m.respond(mobile) {
+        justify-self: center;
+      }
     }
   }
 
@@ -104,6 +155,14 @@
       justify-self: end;
       margin-right: -8rem;
       border-radius: 10px 0 0 10px;
+
+      @include m.respond(tablet) {
+        align-self: auto;
+        justify-self: center;
+        width: 100%;
+        margin-right: 0;
+        border-radius: 10px;
+      }
     }
   }
 
@@ -116,6 +175,14 @@
       grid-area: cta;
       justify-content: flex-end;
       height: 100%;
+
+      @include m.respond(tablet) {
+        justify-content: flex-end;
+      }
+
+      @include m.respond(mobile) {
+        justify-content: center;
+      }
     }
   }
 
@@ -129,6 +196,11 @@
 
     @supports (display: grid) {
       height: 100%;
+
+      @include m.respond(tablet) {
+        width: 100%;
+        max-width: f.rem(350);
+      }
     }
   }
 
