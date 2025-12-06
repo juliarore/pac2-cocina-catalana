@@ -1,5 +1,6 @@
 @use "../1-settings/variables" as v;
 @use "../2-tools/functions" as f;
+@use "../2-tools/mixins" as m;
 
 .header {
   position: sticky;
@@ -9,17 +10,30 @@
 
   &__nav {
     padding: 1rem 8rem;
+
+    @include m.respond(tablet) {
+      padding: 1rem 1.5rem;
+    }
   }
 
   &__logo {
     width: f.rem(200);
     height: auto;
+
+    @include m.respond(mobile) {
+      width: f.rem(120);
+    }
   }
 
   &__list {
     display: flex;
     gap: 3rem;
     list-style: none;
+
+    @include m.respond(mobile) {
+      gap: 0.5rem;
+      align-items: flex-end;
+    }
   }
 
   &__link {
@@ -30,7 +44,6 @@
     }
   }
 }
-
 
 /* Active link style */
 .page-home .nav-link[href="index.html"],
