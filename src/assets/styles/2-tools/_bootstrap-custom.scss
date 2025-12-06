@@ -1,8 +1,9 @@
 @use "../1-settings/variables" as v;
+@use "../2-tools/functions" as f;
 
-// Sobreescritura de variables
+// Overriding variables
 
-// Colores
+// Colors
 $theme-colors: (
   "primary": v.$color-primary,
   "secondary":  v.$color-secondary,
@@ -10,17 +11,26 @@ $theme-colors: (
   "background": v.$color-white
 );
 
-// Tipografía
+// Typography
 $font-family-sans-serif: v.$font-family-sans;
 $font-family-serif: v.$font-family-serif;
 
-// Botones
+// Buttons
 $btn-padding-y: 0.5rem;
 $btn-padding-x: 1.5rem;
 $btn-border-radius: 10px;
 
+// Accordion
+$accordion-icon-color: v.$color-primary;
+$accordion-icon-active-color: v.$color-secondary;
+$accordion-border-color: v.$color-secondary;
+$accordion-button-active-bg: f.opacity(v.$color-secondary, 0.1);
+$accordion-button-focus-box-shadow: v.$color-primary;
+$accordion-body-padding-y: 1.5rem;
+$accordion-padding-y: 1.5rem;
+
 // Disable deprecation warnings
 $enable-deprecation-messages: false;
 
-// Importación de Bootstrap
+// Import Bootstrap
 @import "bootstrap/scss/bootstrap";

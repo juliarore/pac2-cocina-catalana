@@ -1,0 +1,25 @@
+@use "../1-settings/variables" as v;
+@use "../2-tools/functions" as f;
+
+.accordion {
+  &__button {
+    font-weight: v.$fw-semi-bold;
+
+    &:not(.collapsed) {
+      color: v.$color-black;
+    }
+  }
+
+  &__body {
+    text-align: justify;
+  }
+}
+
+.faq {
+  text-align: center;
+
+  &__alert {
+    background-color:  color(display-p3 0.9 0.95 1);
+    border-radius: 0.75rem;
+  }
+}

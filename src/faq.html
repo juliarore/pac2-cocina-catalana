@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
     <link rel="icon" href="./assets/images/favicon.png" type="image/png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,20 +13,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
 
-    <title>Cocina catalana | Jornadas de cocina tradicional</title>
+    <title>Preguntas frecuentes | Jornadas de cocina tradicional</title>
   </head>
-  <body class="page-home">
+  <body class="page-faq">
     <include src="./views/header.html"></include>
 
-    <main>
-      <include src="./views/hero.html"></include>
-      <include src="./views/highlights.html"></include>
-      <include src="./views/speakers-intro.html"></include>
-      <include src="./views/contact-form.html"></include>
+    <main class="main-container">
+        <include src="./views/faq-accordion.html"></include>
     </main>
 
     <include src="./views/footer.html"></include>
 
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+    <script type="module" src="./assets/scripts/main.js"></script>
   </body>
 </html>
