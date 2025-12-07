@@ -22,8 +22,8 @@
 }
 
 .faq {
-  text-align: center;
   min-height: 50svh;
+  text-align: center;
 
   &__alert {
     @include m.respond(mobile) {
