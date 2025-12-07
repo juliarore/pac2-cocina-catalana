@@ -1,26 +1,21 @@
 /* Import SETTINGS */
 @use "./1-settings/variables";
 
-
 /* Import TOOLS */
 @use "./2-tools/functions";
 @use "./2-tools/mixins";
 @use "./2-tools/bootstrap-custom";
 
-
 /* Import GENERIC */
 @use "./3-generic/reset";
 @use "./3-generic/dependencies";
 
-
 /* Import ELEMENTS*/
 @use "./4-elements/base";
-
 
 /* Import OBJECTS */
 @use "./5-objects/container";
 @use "./5-objects/titles";
-
 
 /* Import COMPONENTS */
 @use "./6-components/nav";
@@ -33,9 +28,7 @@
 @use "./6-components/faq";
 @use "./6-components/highlights";
 
-
 /* Import UTILITIES */
-
 
 // CASCADE LAYERS
 @layer reset, base, layout, components, utilities;

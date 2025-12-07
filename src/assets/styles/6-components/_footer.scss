@@ -48,7 +48,7 @@
   &__info {
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: 0.5rem;
   }
 
   &__list {
@@ -63,9 +63,9 @@
   }
 
   &__text {
-      margin-bottom: .5rem;
-      font-size: f.rem(16);
-      color: v.$color-primary;
+    margin-bottom: 0.5rem;
+    font-size: f.rem(16);
+    color: v.$color-primary;
   }
 
   &__copyright {

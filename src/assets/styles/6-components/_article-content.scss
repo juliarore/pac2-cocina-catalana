@@ -2,9 +2,7 @@
 @use "../1-settings/variables" as v;
 @use "../2-tools/mixins" as m;
 
-
 .article-content {
-
   &:has(.article-content__intro):has(.article-content__body) {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -84,13 +82,12 @@
     }
 
     :is(h3) {
-      margin-bottom: .75rem;
+      margin-bottom: 0.75rem;
     }
   }
 }
 
 .article-quote {
-
   &__block {
     padding-left: 2rem;
     margin-bottom: 2rem;

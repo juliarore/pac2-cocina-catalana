@@ -15,7 +15,6 @@
   @include m.respond(mobile) {
     padding-block: 3rem;
   }
-
 }
 
 .medium-container {
@@ -30,9 +29,7 @@
   margin-inline: auto;
 }
 
-
 :is(.main-container, .small-container, .medium-container) {
-
   @include m.respond(tablet) {
     padding-inline: 4rem;
   }

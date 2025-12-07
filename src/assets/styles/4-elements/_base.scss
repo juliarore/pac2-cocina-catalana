@@ -7,7 +7,7 @@ body {
   flex-direction: column;
   font-family: v.$font-family-sans;
   background-color: v.$color-white;
-  }
+}
 
 a,
 a.link {
@@ -16,7 +16,7 @@ a.link {
   transition: color 0.2s ease;
 
   &:hover {
-      color: v.$color-primary-hover;
+    color: v.$color-primary-hover;
   }
 }
 
