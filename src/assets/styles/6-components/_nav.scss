@@ -30,7 +30,7 @@
     gap: 3rem;
     list-style: none;
 
-    @include m.respond(mobile) {
+    @include m.respond(tablet) {
       gap: 0.5rem;
       align-items: flex-end;
     }
