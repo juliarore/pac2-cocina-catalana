@@ -23,7 +23,6 @@ $btn-border-radius: 10px;
 // Navbar toggler
 $navbar-toggler-border-radius: 0;
 $navbar-toggler-focus-width: 0;
-$navbar-toggler-transition: box-shadow 0.15s ease-in-out;
 $navbar-light-toggler-border-color: v.$color-white;
 
 // Accordion
@@ -34,6 +33,10 @@ $accordion-button-active-bg: f.opacity(v.$color-secondary, 0.1);
 $accordion-button-focus-box-shadow: v.$color-primary;
 $accordion-body-padding-y: 1.5rem;
 $accordion-padding-y: 1.5rem;
+
+// Alert
+$alert-bg: color(display-p3 0.9 0.95 1);
+$alert-border-radius: 0.75rem;
 
 // Disable deprecation warnings
 $enable-deprecation-messages: false;
